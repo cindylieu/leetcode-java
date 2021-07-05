@@ -10,7 +10,6 @@ public class ReverseInteger {
 
     public static void main(String[] args) {
         System.out.println(reverseInteger(-2147483412));
-        System.out.println(reverse(-2147483412));
     }
 
     public static int reverseInteger(int x) {
@@ -36,26 +35,5 @@ public class ReverseInteger {
         }
 
         return reversed;
-    }
-
-    public static int reverse(int x) {
-        int sum = 0;
-
-        while (x != 0) {
-            int digit = x % 10;
-
-            if (sum > Integer.MAX_VALUE / 10) {
-                return 0;
-            }
-
-            if (sum < Integer.MIN_VALUE / 10) {
-                return 0;
-            }
-
-            sum = sum * 10 + digit;
-            x = x / 10;
-        }
-
-        return sum;
     }
 }
