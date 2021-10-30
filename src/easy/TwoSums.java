@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class TwoSums {
 
     public static void main(String[] args) {
-        int[] nums = {2, 7, 11, 15};
+        int[] nums = {3, 2, 11, 7, 15};
         twoSum(nums, 9);
         twoSumImproved(nums, 9);;
     }
