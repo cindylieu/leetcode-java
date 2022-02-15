@@ -1,5 +1,6 @@
 package easy;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSums {
@@ -8,6 +9,7 @@ public class TwoSums {
         int[] nums = {3, 2, 11, 7, 15};
         twoSum(nums, 9);
         twoSumImproved(nums, 9);;
+        System.out.println(Arrays.toString(twoSumP2(nums, 9)));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -48,6 +50,25 @@ public class TwoSums {
                 index++;
             }
         }
+        return null;
+    }
+
+    //practiced again
+    public static int[] twoSumP2(int[] nums, int target) {
+
+        HashMap<Integer, Integer> indexMap = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            indexMap.put(nums[i], i);
+        }
+
+        for (int i = 0; i < indexMap.size(); i++) {
+            if (indexMap.containsKey(target-nums[i])) {
+                int[] r = {indexMap.get(nums[i]), indexMap.get(target-nums[i])};
+                return r;
+            }
+        }
+
         return null;
     }
 }

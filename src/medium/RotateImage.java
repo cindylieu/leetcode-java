@@ -1,6 +1,4 @@
-package easy;
-
-import java.util.Arrays;
+package medium;
 
 public class RotateImage {
 
